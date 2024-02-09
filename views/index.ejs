@@ -1,20 +1,31 @@
 <%- include('./partials/head') %>
 
 <article>
-  <header>
-    <!-- <h1>Hallo</h1>
-    <p>mijn naam is</p> -->
-  </header>
 
-  <h1><%= data.avatar %> <%= data.name %></h1>
+  <div class="socials">
+    <ul>
+      <li><a href="mailto:<%= data.email %>">email</a></li>
+      <li><a href="https:github.com/<%= data.github_handle %>" target="_blank">github</a></li>
+      <li><a href="">insta</a></li>
+    </ul>
+  </div>
 
-  <p><%= data.avatar %> <%= data.name %> <%= data.surname %></p>
-  <a href="mailto:<%= data.email %>"><%= data.email %></a>
-  <a href="https:github.com/<%= data.github_handle %>" target="_blank">Mijn github</a>
+  <div>
+    <h1 class="typeWriter"><%= data.name %></h1>
+    <h3> <%= data.surname %></h3>
+  </div>
 
-  <p><%= data.bio %></p>
+  <button><img src="/public/images/turnWhite.svg" alt="turn icon"></button>
+</article>
 
-  <footer></footer>
+<article>
+  <div>
+    <h3><%= data.name %> <%= data.avatar %></h3>
+
+    <p><p><%= data.bio %></p></p>
+  </div>
+
+  <button>turn</button>
 </article>
 
 <%- include('./partials/foot') %>
