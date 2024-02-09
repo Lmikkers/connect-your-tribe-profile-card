@@ -1,31 +1,35 @@
 <%- include('./partials/head') %>
 
-<article>
+<div class="" id="cards">
 
-  <div class="socials">
-    <ul>
-      <li><a href="mailto:<%= data.email %>">email</a></li>
-      <li><a href="https:github.com/<%= data.github_handle %>" target="_blank">github</a></li>
-      <li><a href="">insta</a></li>
-    </ul>
-  </div>
+  <article class="cards cardFront">
 
-  <div>
-    <h1 class="typeWriter"><%= data.name %></h1>
-    <h3> <%= data.surname %></h3>
-  </div>
+    <div class="socials">
+      <ul>
+        <li><a href="mailto:<%= data.email %>">email</a></li>
+        <li><a href="https:github.com/<%= data.github_handle %>" target="_blank">github</a></li>
+        <li><a href="">insta</a></li>
+      </ul>
+    </div>
 
-  <button><img src="/public/images/turnWhite.svg" alt="turn icon"></button>
-</article>
+    <div>
+      <h1 class="typeWriter"><%= data.name %></h1>
+      <h3> <%= data.surname %></h3>
+    </div>
 
-<article>
-  <div>
-    <h3><%= data.name %> <%= data.avatar %></h3>
+    <button onclick="turn()"><img src="/images/turnWhite.svg" alt="turn icon"></button>
+  </article>
 
-    <p><p><%= data.bio %></p></p>
-  </div>
+  <article class="cards cardBack">
+    <div>
+      <h3><%= data.name %> <%= data.avatar %></h3>
 
-  <button>turn</button>
-</article>
+      <p><p><%= data.bio %></p></p>
+    </div>
 
+    <button onclick="turn()">turn</button>
+  </article>
+
+</div>
 <%- include('./partials/foot') %>
+

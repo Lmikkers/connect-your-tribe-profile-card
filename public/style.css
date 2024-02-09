@@ -50,7 +50,6 @@ article {
   box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
   > p {
     font-size: 2rem;
-    /* font-family: 'Permanent Marker', cursive; */
     word-break: break-all;
   }
 }
@@ -60,11 +59,6 @@ article:nth-child(1) h3 {
   text-transform: lowercase;
   font-weight: 100;
 }
-
-article:nth-child(2) {
-  display: none;
-}
-
 footer {
   height: 1rem;
   background: hotpink;
@@ -114,19 +108,22 @@ button img {
   text-decoration: none;
 }
 
+
+
+
+
+
 /* ANIMATIE TYPEWRITER  */
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
-
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
-
 @keyframes wave-animation {
   0% { transform: rotate( 0.0deg) }
   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
@@ -138,3 +135,31 @@ button img {
   100% { transform: rotate( 0.0deg) }
 }
 /* EINDE ANIMATIE TYPEWRITER */
+
+
+
+
+.cards {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.turned {
+  transform: rotateY(180deg);
+}
+.cardFront,
+.cardBack{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.cardBack{
+  position: absolute;
+  /* display: none; */
+  transition: .75s ease-in-out;
+  /* wanneer je flipt staat de tekst goed */
+  transform: rotateY(180deg);
+  padding: 2em 4em;
+}
+.showCard .cardBack{
+  display: flex;
+  transition: .75s ease-in-out;
+}
