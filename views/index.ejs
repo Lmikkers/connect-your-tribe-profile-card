@@ -1,35 +1,34 @@
 <%- include('./partials/head') %>
-
-<div class="cardContainer" id="cards">
+<main class="cards" id="cardContainer">
 
   <article class="cards cardFront">
 
     <div class="socials">
       <ul>
-        <li><a href="mailto:<%= data.email %>"><img src="/images/mailWhite.svg"></a></li>
-        <li><a href="https://github.com/<%= data.github_handle %>" target="_blank"><img src="/images/github-mark-white.svg" alt=""></a></li>
-        <li><a href="">insta</a></li>
+        <li><a href="mailto:<%= data.email %>"><img src="/images/mailWhite.svg" alt="mail icoon"></a></li>
+        <li><a href="https://github.com/<%= data.github_handle %>" target="_blank"><img src="/images/github-mark-white.svg" alt="github logo icoon"></a></li>
+        <li><a href=""><img src="/images/instagramWhite.svg" alt="instagram logo"></a></li>
       </ul>
     </div>
 
     <div>
       <h1 class="typeWriter"><%= data.name %></h1>
-      <h3> <%= data.surname %></h3>
+      <h2> <%= data.surname %></h2>
     </div>
 
-    <button onclick="turn()"><img src="/images/turnWhite.svg" alt="turn icon"></button>
+    <button><img src="/images/turnedWhite.svg" alt="turn icon"></button>
   </article>
 
   <article class="cards cardBack">
-    <div>
-      <h3><%= data.name %> <%= data.avatar %></h3>
 
-      <p><p><%= data.bio %></p></p>
-    </div>
+    <img src="/images/profilePicture.jpeg" alt="profiel foto">
+    <button><img src="/images/turnWhite.svg" alt="turn icon terug"></button> 
 
-    <button onclick="turn()"><img src="/images/turnedWhite.svg" alt=""></button>
+    <h3><%= data.name %> <%= data.avatar %></h3>
+    <p><%= data.bio %></p>
+
   </article>
 
-</div>
+</main>
 <%- include('./partials/foot') %>
 

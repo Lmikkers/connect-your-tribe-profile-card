@@ -1,14 +1,14 @@
-var card = document.querySelector('.cardContainer')
-var button = document.querySelector('button');
+// let card = document.querySelector('.cardContainer')
+const buttons = document.querySelectorAll('button');
+const cardContainer = document.getElementById('cardContainer');
 
-var buttons = document.querySelectorAll('button');
-
-
-function turn() {
-    console.log('toggle card');
-    card.classList.toggle('turned');
-}
 
 buttons.forEach(function(buttonTurn) {
   buttonTurn.addEventListener('click', turn);
 });
+
+function turn() {
+  console.log('toggle card');
+  cardContainer.classList.toggle('turned');
+}
+
