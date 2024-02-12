@@ -177,18 +177,33 @@ article:nth-of-type(2) button:hover {
   /* wanneer je flipt staat de tekst goed */
   transform: rotateY(180deg);
   padding: 2rem 4rem;
+  /* DISPLAY GRID */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.cardBack h3 {
+  grid-column: 4 / span 4;
+  grid-row: 1/ span 2;
 }
 .cardBack > img {
   position: absolute;
   top: -3rem;
   left: -3rem;
-  width: 14rem;
-  height: 14rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
   border: 8px solid white;
   object-fit: cover;
+}
+.cardBack p {
+  grid-column: 2 / span 8;
+  grid-row: span 3;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 .showCard .cardBack{
   display: flex;
   transition: .75s ease-in-out;
 }
+
